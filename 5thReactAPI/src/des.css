@@ -1,0 +1,70 @@
+/* color pallete
+PASTEL
+#FF9B9B - peach
+#FFD6A5 - orange
+#FFFEC4 - yellow
+#CBFFA9 - green 
+VINTAGE
+#001524 - black
+#445D48 - dark green
+#D6CC99 - brown
+#FDE5D4 - lighter peach*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dela+Gothic+One&family=Pacifico&family=Poppins:ital,wght@0,500;1,400&display=swap');
+body{
+    background-image: radial-gradient(circle at top right, #A8DF8E, #FFBFBF);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Dela Gothic One;
+    font-size: large;
+    color: #445D48;
+}
+
+.input{
+    width: 300px;
+    margin-top: 10px;
+    /* background-color: #b1d39ab9; */
+
+}
+
+input{
+    background-color: #dbcdcd;
+    border: solid #3a4f3185;
+    color: #CBFFA9;
+    border-radius: 5px;
+    font-family: Poppins;
+    margin-bottom: 5px;
+    width: 250px;
+    height: 25px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.display{
+    background-color: #ffe5e55e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    border: solid #D6CC99;
+    min-width: 250px;
+    font-family: Poppins;
+}
+
+.button{
+    margin-top: 20px;
+    background-color:#D6CC99;
+    border-color: #FFBFBF;
+    border: 2px;
+    color: #445D48 ;
+}
+

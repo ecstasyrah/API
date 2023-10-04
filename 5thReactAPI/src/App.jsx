@@ -12,10 +12,7 @@ function App() {
   const [students, setStudents] = useState([]);
   const [input, setInput] = useState([]);
   const [newStudent, setNewStudent] = useState({});
-  const [id, setId] = useState("");
-  const [name, setName] = useState("");
-  const [age, setAge] = useState("");
-  const [course, setCourse] = useState("");
+  const [person, setPerson] = useState ([]);
   
   useEffect(()=>{
     fetch('https://my-json-server.typicode.com/troy1129/jsonplaceholder/db')
@@ -43,10 +40,8 @@ function App() {
       course: e.target.course.value
     };
     setStudents([...students, newStudent]) 
-    setId("");
-    setName("");
-    setAge("");
-    setCourse("");
+    var form = document.getElementById("myForm");
+    form.reset();
   };
 
   return (
@@ -60,21 +55,23 @@ function App() {
       </ul>
       </div>
       <div className='input'>
-      <form onSubmit={handleSubmit}>
+      <form id="myForm" onSubmit={handleSubmit}>
           {<div className='input'>
-            <input id='id' type="text"  value={id} onChange={e => setId(e.target.value)} placeholder='ID'/>
+            <input id='id' type="text" placeholder='ID'/>
             <br />
-            <input id='name' type="text" value={name} onChange={e => setName(e.target.value)} placeholder='Name' />
+            <input id='name' type="text" placeholder='Name' />
             <br />
-            <input id='age' type="text" value={age} onChange={e => setAge(e.target.value)} placeholder='Age'/>
+            <input id='age' type="text" placeholder='Age'/>
             <br />
-            <input id='course' type="text" value={course} onChange={e => setCourse(e.target.value)} placeholder='Course'/>
+            <input id='course' type="text" placeholder='Course'/>
             <br />
             <button type="submit" className='button'>Submit</button>
           </div>}
       </form>
       </div>
-      </div>
+
+
+    </div>
   );
 }
 
